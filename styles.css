@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the body of the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6fb7e4;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Styling for the main title */
+h1 {
+  font-size: 2.5rem; /* Use rem for scalability */
+  margin-bottom: 2rem;
+  color: #000000;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Styling for each clock box */
+.clock {
+  background-color: rgb(253, 253, 253);
+  padding: 1.25rem; /* Equivalent to 20px */
+  border-radius: 0.5rem; /* Equivalent to 8px */
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0.1, 0.2); /* Equivalent to 2px 2px 5px rgba(0, 0, 0.1) */
+  text-align: center;
+  margin: 1rem;
+  width: 100%;
+  max-width: 15.625rem; /* Equivalent to 250px */
+  flex-grow: 1;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Styling for the clocks container */
+#clocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Gap between clocks */
+}
+
+/* Responsiveness: on small screens (mobile), clocks should stack vertically */
+@media (max-width: 37.5rem) {
+  /* Equivalent to 600px */
+  #clocks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Map container styling */
+#map {
+  height: 400px; /* Set a fixed height for the map */
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.add-new {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+label[for="cityDropdown"],
+label[for="timezoneDropdown"] {
+  font-weight: bold;
+  margin-right: 0.1rem;
+}
+
+#cityDropdown {
+  margin-right: 4rem;
+  width: 7rem;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+}
+
+#timezoneDropdown {
+  width: 10rem;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+}
+
+#addClockButton {
+  margin-top: 1.5rem;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  border: none;
+}

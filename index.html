@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World Clock</title>
+    <!-- Link to Tailwind CSS using CDN -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <!-- Link for openlayer styling-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css"
+      type="text/css"
+    />
+    <!-- Link to external custom styles if needed -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <h1 class="text-center text-3xl font-bold my-6">Atlas Bay</h1>
+    <!-- The div where clocks will be added dynamically -->
+    <div
+      id="clocks"
+      class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:justify-center"
+    ></div>
+
+   
+  <h3 class="add-new">ADD NEW CLOCK</h3>
+  <div class="newClockBubble">
+  <label for="cityDropdown">CITY:</label>
+  <select id="cityDropdown">
+    <option value="">Select a city</option>
+    <option value="Tokyo">Tokyo</option>
+    <option value="Lagos">Lagos</option>
+    <option value="London">London</option>
+    <option value="Sydney">Sydney</option>
+    <option value="Paris">Paris</option>
+  </select>
+
+  <label for="timezoneDropdown">TIMEZONE:</label>
+  <select id="timezoneDropdown">
+    <option value="">Select a timezone </option>
+    <option value="Asia/Tokyo">Asia/Tokyo</option>
+    <option value="Africa/Lagos">Africa/Lagos</option>
+    <option value="Europe/London">Europe/London</option>
+    <option value="Australia/Sydney">Australia/Sydney</option>
+    <option value="Europe/Paris">Europe/Paris</option>
+  </select>
+  </div>
+
+  <button id="addClockButton">Add Clock</button>
+</div>
+
+    <!-- The map container -->
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
